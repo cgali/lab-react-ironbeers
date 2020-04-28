@@ -42,7 +42,6 @@ class SingleBeer extends Component {
     if (beer !== undefined) {
       return(
         <div>
-          <HomeButton />
           <div>
             <img src={ beer.image_url} alt="beer"/>
             <section>
@@ -76,8 +75,9 @@ class SingleBeer extends Component {
         return <div>{ status }</div>;
       case STATUS.LOADED:
         return <div>
-          { this.selectBeer() }
-        </div>
+                <HomeButton />
+                { this.selectBeer() }
+              </div>
       case STATUS.ERROR:
         return <div>{ status }</div>;
     }

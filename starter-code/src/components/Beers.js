@@ -39,9 +39,9 @@ class Beers extends Component {
     const { beersList} = this.state;
     return beersList.map((info, index) => 
     <div key={index}>
-      <Link className="beers-image" to={`/beers/${beersList._id}`}><img src={ info.image_url } alt="beers"/></Link>
+      <Link className="beers-image" to={`/beers/${info._id}`}><img src={ info.image_url } alt="beers"/></Link>
       <div className="beers-info-box">
-        <Link className="beers-name" to={`/beers/${beersList._id}`}>{ info.name }</Link>
+        <Link className="beers-name" to={`/beers/${info._id}`}>{ info.name }</Link>
         <p>{ info.tagline }</p>
         <p><strong>Contributed by:</strong>{ info.contributed_by }</p>
       </div>
